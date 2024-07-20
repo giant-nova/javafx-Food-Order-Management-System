@@ -60,10 +60,11 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="fp_proceedBtn" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Proceed" />
-                  <ComboBox fx:id="fp_question" layoutX="50.0" layoutY="136.0" prefHeight="30.0" prefWidth="200.0" promptText="Question" styleClass="textfield" />
-                  <TextField fx:id="fp_answer" layoutX="50.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="Answer" styleClass="textfield" />
-                  <Button fx:id="fp_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" text="&lt; Back" />
+                  <Button fx:id="fp_proceedBtn" layoutX="40.0" layoutY="263.0" mnemonicParsing="false" onAction="#proceedBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Proceed" />
+                  <ComboBox fx:id="fp_question" layoutX="50.0" layoutY="170.0" prefHeight="30.0" prefWidth="200.0" promptText="Question" styleClass="textfield" />
+                  <TextField fx:id="fp_answer" layoutX="50.0" layoutY="215.0" prefHeight="30.0" prefWidth="200.0" promptText="Answer" styleClass="textfield" />
+                  <Button fx:id="fp_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" onAction="#backToLoginForm" prefHeight="40.0" prefWidth="80.0" styleClass="login-btn" text="&lt; Back" />
+                  <TextField fx:id="fp_username" layoutX="50.0" layoutY="125.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" styleClass="textfield" />
                </children>
             </AnchorPane>
             <AnchorPane id="forgot_password_form" fx:id="np_newPassForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="textfield" stylesheets="@loginDesign.css" visible="false">
@@ -73,10 +74,10 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="np_changePassBtn" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Change Password" />
-                  <TextField fx:id="np_confirmPassword" layoutX="50.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="Confirm New Password" styleClass="textfield" />
-                  <Button fx:id="np_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" text="&lt; Back" />
-                  <TextField fx:id="np_newPassword" layoutX="50.0" layoutY="139.0" prefHeight="30.0" prefWidth="200.0" promptText="New Password" styleClass="textfield" />
+                  <Button fx:id="np_changePassBtn" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" onAction="#changePassBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Change Password" />
+                  <TextField fx:id="np_confirmPassword" layoutX="50.0" layoutY="185.0" onAction="#changePassBtn" prefHeight="30.0" prefWidth="200.0" promptText="Confirm New Password" styleClass="textfield" />
+                  <Button fx:id="np_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" onAction="#backToQuestionForm" prefHeight="40.0" prefWidth="80.0" styleClass="login-btn" text="&lt; Back" />
+                  <TextField fx:id="np_newPassword" layoutX="50.0" layoutY="139.0" onAction="#changePassBtn" prefHeight="30.0" prefWidth="200.0" promptText="New Password" styleClass="textfield" />
                </children>
             </AnchorPane>
          </children>
