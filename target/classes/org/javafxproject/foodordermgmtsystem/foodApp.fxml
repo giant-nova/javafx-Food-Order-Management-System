@@ -14,7 +14,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <AnchorPane id="signUp" fx:id="side_form" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@loginDesign.css">
+            <AnchorPane id="side_form" fx:id="side_form" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@loginDesign.css">
                <children>
                   <Label layoutX="80.0" layoutY="302.0" prefHeight="30.0" prefWidth="141.0" text="Create Account" textFill="WHITE">
                      <font>
@@ -33,24 +33,50 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="si_loginBtn" layoutX="40.0" layoutY="266.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Login" />
+                  <Button fx:id="si_loginBtn" layoutX="40.0" layoutY="266.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Login" />
                   <TextField fx:id="si_username" layoutX="40.0" layoutY="137.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" />
-                  <TextField fx:id="si_password" layoutX="40.0" layoutY="180.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" />
-                  <Hyperlink fx:id="si_forgotPassword" layoutX="40.0" layoutY="220.0" text="Forgot Password?" />
+                  <Hyperlink fx:id="si_forgotPassword" layoutX="40.0" layoutY="220.0" onAction="#switchForgotPass" text="Forgot Password?" />
+                  <PasswordField fx:id="si_password" layoutX="40.0" layoutY="182.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" />
                </children>
             </AnchorPane>
-            <AnchorPane id="registerForm" fx:id="su_signupForm" layoutX="1.0" layoutY="1.0" prefHeight="400.0" prefWidth="300.0" stylesheets="@loginDesign.css" visible="false">
+            <AnchorPane id="su_signup_form" fx:id="su_signupForm" prefHeight="400.0" prefWidth="300.0" stylesheets="@loginDesign.css" visible="false">
                <children>
                   <Label layoutX="40.0" layoutY="78.0" prefHeight="30.0" prefWidth="141.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Register" textFill="#6e72f2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="su_signupBtn" layoutX="40.0" layoutY="329.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Sign Up" />
+                  <Button fx:id="su_signupBtn" layoutX="40.0" layoutY="329.0" mnemonicParsing="false" onAction="#regBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Sign Up" />
                   <TextField fx:id="su_username" layoutX="40.0" layoutY="137.0" prefHeight="30.0" prefWidth="220.0" promptText="Username" styleClass="textfield" />
-                  <TextField fx:id="su_password" layoutX="40.0" layoutY="180.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" />
+                  <TextField fx:id="su_answer" layoutX="40.0" layoutY="270.0" prefHeight="30.0" prefWidth="220.0" promptText="Answer" styleClass="textfield" />
                   <ComboBox fx:id="su_question" layoutX="40.0" layoutY="226.0" prefHeight="30.0" prefWidth="220.0" promptText="Question" styleClass="textfield" />
-                  <PasswordField fx:id="su_answer" layoutX="40.0" layoutY="276.0" prefHeight="30.0" prefWidth="220.0" promptText="Answer" styleClass="textfield" />
+                  <TextField fx:id="su_password" layoutX="40.0" layoutY="182.0" prefHeight="30.0" prefWidth="220.0" promptText="Password" styleClass="textfield" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="forgot_password_form" fx:id="fp_questionForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="textfield" stylesheets="@loginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="40.0" layoutY="78.0" prefHeight="30.0" prefWidth="181.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Forgot Password" textFill="#6e72f2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="fp_proceedBtn" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" onAction="#loginBtn" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Proceed" />
+                  <ComboBox fx:id="fp_question" layoutX="50.0" layoutY="136.0" prefHeight="30.0" prefWidth="200.0" promptText="Question" styleClass="textfield" />
+                  <TextField fx:id="fp_answer" layoutX="50.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="Answer" styleClass="textfield" />
+                  <Button fx:id="fp_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" text="&lt; Back" />
+               </children>
+            </AnchorPane>
+            <AnchorPane id="forgot_password_form" fx:id="np_newPassForm" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="textfield" stylesheets="@loginDesign.css" visible="false">
+               <children>
+                  <Label layoutX="40.0" layoutY="78.0" prefHeight="30.0" prefWidth="181.0" styleClass="head-label" stylesheets="@loginDesign.css" text="Forgot Password" textFill="#6e72f2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="np_changePassBtn" layoutX="40.0" layoutY="249.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="login-btn" text="Change Password" />
+                  <TextField fx:id="np_confirmPassword" layoutX="50.0" layoutY="185.0" prefHeight="30.0" prefWidth="200.0" promptText="Confirm New Password" styleClass="textfield" />
+                  <Button fx:id="np_back" layoutX="111.0" layoutY="336.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="login-btn" text="&lt; Back" />
+                  <TextField fx:id="np_newPassword" layoutX="50.0" layoutY="139.0" prefHeight="30.0" prefWidth="200.0" promptText="New Password" styleClass="textfield" />
                </children>
             </AnchorPane>
          </children>

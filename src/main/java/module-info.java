@@ -8,6 +8,7 @@ module org.vervebridge.proj.foodordermgmtsystem {
     requires net.synedra.validatorfx;
     requires org.kordamp.ikonli.javafx;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
 
     opens org.javafxproject.foodordermgmtsystem to javafx.fxml;
     exports org.javafxproject.foodordermgmtsystem;
