@@ -1,7 +1,5 @@
 package org.javafxproject.foodordermgmtsystem;
 
-import java.sql.Date;
-
 public class productData {
 
     private Integer id;
@@ -12,7 +10,7 @@ public class productData {
     private Double price;
     private String status;
     private String image;
-    private Date date;
+    private String date;
     private Integer quantity;
 
     public productData(Integer id,
@@ -23,7 +21,7 @@ public class productData {
                        Double price,
                        String status,
                        String image,
-                       Date date
+                       String date
     ) {
         this.id = id;
         this.productId = productId;
@@ -43,7 +41,7 @@ public class productData {
                        Integer quantity,
                        Double price,
                        String image,
-                       Date date
+                       String date
     ){
         this.id = id;
         this.productId = productId;
@@ -87,7 +85,7 @@ public class productData {
         return image;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 

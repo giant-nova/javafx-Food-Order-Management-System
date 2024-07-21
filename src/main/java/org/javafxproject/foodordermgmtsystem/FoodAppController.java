@@ -19,10 +19,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.ResourceBundle;
+import java.util.*;
 
 public class FoodAppController implements Initializable {
 
@@ -154,12 +151,12 @@ public class FoodAppController implements Initializable {
                     alert.showAndWait();
 
                     // LINK YOUR MAIN FORM
-                    Parent root = FXMLLoader.load(getClass().getResource("mainForm.fxml"));
+                    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("mainForm.fxml")));
 
                     Stage stage = new Stage();
                     Scene scene = new Scene(root);
 
-                    stage.setTitle("Cafe Shop Management System");
+                    stage.setTitle("Food Order Management System");
                     stage.setMinWidth(1100);
                     stage.setMinHeight(600);
 
