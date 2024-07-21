@@ -1,9 +1,9 @@
 # Food Order Management System- Java FX Application
 ## A simple JavaFx application build on Java SE or core Java to mimic a standard Food Order Management System for a typical restaurant.
 
-The built application consists of two windows:-
-- Sign In or Login In page
-- User dashboard
+The application consists of mainly two windows:-
+1. Create Account and Login window
+2. Menu and Customer Order Panel
 
 ## Tech Stack Used
 
